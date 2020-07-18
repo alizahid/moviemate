@@ -1,0 +1,48 @@
+// fonts
+
+@import url('https://rsms.me/inter/inter.css');
+
+// tailwind
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// global
+
+form {
+  button,
+  input {
+    @apply appearance-none border-b-2 border-white outline-none py-4 duration-200 text-left min-w-input;
+
+    &:focus {
+      @apply outline-none;
+    }
+  }
+
+  button {
+    @apply text-primary;
+
+    &:active {
+      @apply border-secondary;
+    }
+  }
+
+  input {
+    &:focus {
+      @apply border-primary;
+    }
+  }
+}
+
+// layout
+
+#__next {
+  @apply min-h-screen flex flex-col items-center justify-center;
+}
+
+// components
+
+.gradient {
+  background: linear-gradient(45deg, #e80c30, #fd902b);
+}
